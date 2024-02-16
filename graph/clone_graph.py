@@ -2,8 +2,6 @@
 
 from typing import Optional
 class Solution:
-    # I want to implement a simple BFS
-    # We can implement a DFS
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
         if node is None:
             return

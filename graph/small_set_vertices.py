@@ -12,3 +12,12 @@ class Solution:
             if not edge[0] in reachable_vertices:
                 minimal_vertices.add(edge[0])
         return list(minimal_vertices)
+
+# Second solution:
+class Solution:
+    def findSmallestSetOfVertices(self, n: int, edges: List[List[int]]) -> List[int]:
+        minimal_vertices = set(range(n))
+        for edge in edges:
+            if edge[1] in minimal_vertices:
+                minimal_vertices.remove(edge[1])
+        return list(minimal_vertices)

@@ -29,4 +29,19 @@ public:
 };
 
 // Recursion
+class Solution {
+public:
+    // Method 2: recursion
+    int excludeIncludeHelper(vector<int>& nums, int index, int total_xors) {
+        if (index == nums.size()) {
+            return total_xors;
+        }
 
+        int exclude = excludeIncludeHelper(nums, index+1, total_xors);
+        int include = excludeIncludeHelper(nums, index+1, total_xors^nums[index]);
+        return include+exclude;
+    }
+    int subsetXORSum(vector<int>& nums) {
+        return excludeIncludeHelper(nums, 0, 0);
+    }
+};

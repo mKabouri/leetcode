@@ -24,5 +24,5 @@ if __name__ == "__main__":
     start_time = time.time()
     selection_sort(array)
     end_time = time.time() - start_time
-    print(f"Time insertion sort: {end_time}")
+    print(f"Time selection sort: {end_time}")
     print(f"------------------------------------------------------------------------------")
